@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware(['auth.shop'])->name('home');
+Route::get('/', 'ShopifyController@products')->name('home'); 
