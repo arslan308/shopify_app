@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use OhMyBrew\ShopifyApp\Facades\ShopifyApp;
 use Log;
+use DB;
+use App\Insta;
 class ShopifyController extends Controller
 {
     public function __construct() {
@@ -16,10 +18,22 @@ class ShopifyController extends Controller
     $script_tag = array(
     "script_tag" => array(
         "event" => "onload",
-        "src" => "https://c8a32519.ngrok.io/js/custom.js"
+        "src" => "https://ars.taajmart.com/js/custom.js" 
     )
     );
     $shop->api()->rest('POST', '/admin/api/2020-04/script_tags.json',$script_tag);
-    return view("welcome", ["products"=>$requests]);
+    $shop_detail = Insta::where('shop_id', '=', $shop->id)->first();
+    return view("welcome", ["products"=>$requests , "shop_detail" => $shop_detail])->header('X-Frame-Options', '*');
+    }
+    public function insta(Request $request){
+    $shop = ShopifyApp::shop();
+    $user = Insta::where('shop_id', '=', $shop->id)->first();
+   if ($user) {
+    Insta::where('shop_id', '=', $shop->id)->update(['insta_token' => $request->insta_token]);
+   }
+   else{
+    $data=array("shop_id" => $shop->id, "insta_token" =>$request->insta_token);
+    DB::table('instas')->insert($data);
+   }
     }
 }

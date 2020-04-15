@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/', 'ShopifyController@products')->name('home'); 
+Route::get('/', 'ShopifyController@products')->name('home');
+Route::post('/insta', 'ShopifyController@insta');  
+
