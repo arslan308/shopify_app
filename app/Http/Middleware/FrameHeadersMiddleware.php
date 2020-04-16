@@ -13,8 +13,10 @@ class FrameHeadersMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next) 
     {
-        return $next($request);
+        $response = $next($request);
+        $response->headers->set('X-Frame-Options', 'ALLOW ALL');
+        return $response;
     }
 } 

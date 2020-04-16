@@ -1,5 +1,69 @@
 [
     {
+        "name": "beberlei/assert",
+        "version": "v3.2.7",
+        "version_normalized": "3.2.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/beberlei/assert.git",
+            "reference": "d63a6943fc4fd1a2aedb65994e3548715105abcf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/beberlei/assert/zipball/d63a6943fc4fd1a2aedb65994e3548715105abcf",
+            "reference": "d63a6943fc4fd1a2aedb65994e3548715105abcf",
+            "shasum": ""
+        },
+        "require": {
+            "ext-ctype": "*",
+            "ext-json": "*",
+            "ext-mbstring": "*",
+            "ext-simplexml": "*",
+            "php": "^7"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "*",
+            "phpstan/phpstan-shim": "*",
+            "phpunit/phpunit": ">=6.0.0 <8"
+        },
+        "suggest": {
+            "ext-intl": "Needed to allow Assertion::count(), Assertion::isCountable(), Assertion::minCount(), and Assertion::maxCount() to operate on ResourceBundles"
+        },
+        "time": "2019-12-19T17:51:41+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Assert\\": "lib/Assert"
+            },
+            "files": [
+                "lib/Assert/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-2-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Benjamin Eberlei",
+                "email": "kontakt@beberlei.de",
+                "role": "Lead Developer"
+            },
+            {
+                "name": "Richard Quadling",
+                "email": "rquadling@gmail.com",
+                "role": "Collaborator"
+            }
+        ],
+        "description": "Thin assertion library for input validation in business models.",
+        "keywords": [
+            "assert",
+            "assertion",
+            "validation"
+        ]
+    },
+    {
         "name": "beyondcode/laravel-dump-server",
         "version": "1.3.0",
         "version_normalized": "1.3.0.0",
@@ -61,6 +125,48 @@
             "beyondcode",
             "laravel-dump-server"
         ]
+    },
+    {
+        "name": "chrisharrison/php-array-of",
+        "version": "v1.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/chrisharrison/php-array-of.git",
+            "reference": "a2e0f94237c9409356d1a9770c849b2ca31ffc6a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/chrisharrison/php-array-of/zipball/a2e0f94237c9409356d1a9770c849b2ca31ffc6a",
+            "reference": "a2e0f94237c9409356d1a9770c849b2ca31ffc6a",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^6.3",
+            "squizlabs/php_codesniffer": "^3.1"
+        },
+        "time": "2017-12-01T13:20:27+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ChrisHarrison\\ArrayOf\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Chris Harrison",
+                "email": "c.harrison1988@gmail.com"
+            }
+        ],
+        "description": "Implement an array of a defined type. Generics replacement for PHP."
     },
     {
         "name": "dnoegel/php-xdg-base-dir",
@@ -826,6 +932,51 @@
             "throwable",
             "whoops"
         ]
+    },
+    {
+        "name": "funeralzone/valueobjects",
+        "version": "0.4.5",
+        "version_normalized": "0.4.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/funeralzone/valueobjects.git",
+            "reference": "d327742abc70a8b74f2ebbd531cd25e9c249bedf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/funeralzone/valueobjects/zipball/d327742abc70a8b74f2ebbd531cd25e9c249bedf",
+            "reference": "d327742abc70a8b74f2ebbd531cd25e9c249bedf",
+            "shasum": ""
+        },
+        "require": {
+            "beberlei/assert": "^2.7 || ^3.1",
+            "chrisharrison/php-array-of": "^1.0",
+            "php": "^7.1.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "^1.0",
+            "phpunit/phpunit": "^6.2",
+            "squizlabs/php_codesniffer": "^3.1"
+        },
+        "time": "2019-04-04T08:12:20+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Funeralzone\\ValueObjects\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Chris Harrison",
+                "email": "c.harrison1988@gmail.com"
+            }
+        ],
+        "description": "A PHP 7.1 value objects helper library."
     },
     {
         "name": "fzaninotto/faker",
@@ -2269,6 +2420,59 @@
             "serializable",
             "serialization",
             "serialize"
+        ]
+    },
+    {
+        "name": "osiset/basic-shopify-api",
+        "version": "v7.0.0",
+        "version_normalized": "7.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/osiset/Basic-Shopify-API.git",
+            "reference": "3ed812a1a25a54e31ed7cd233b89da94b6acc0cf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/osiset/Basic-Shopify-API/zipball/3ed812a1a25a54e31ed7cd233b89da94b6acc0cf",
+            "reference": "3ed812a1a25a54e31ed7cd233b89da94b6acc0cf",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "^6.3",
+            "guzzlehttp/promises": "^1.3",
+            "php": ">=7.0.0",
+            "psr/log": "^1.1"
+        },
+        "require-dev": {
+            "phpdocumentor/phpdocumentor": "2.*",
+            "phpunit/phpunit": "^6.2",
+            "satooshi/php-coveralls": "~1.0",
+            "squizlabs/php_codesniffer": "^3.0"
+        },
+        "time": "2020-03-02T04:33:29+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/Osiset/BasicShopifyAPI.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Tyler King",
+                "email": "tyler@osiset.com"
+            }
+        ],
+        "description": "A basic Shopify API wrapper with REST and GraphQL support.",
+        "keywords": [
+            "api",
+            "graphql",
+            "rest",
+            "shopify"
         ]
     },
     {

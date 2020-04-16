@@ -284,7 +284,7 @@ return [
     'webhooks' => [
             [
                 'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'app/uninstalled'),
-                'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://some-app.com/webhook/app-uninstalled')
+                'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://ars.taajmart.com/webhook/app-uninstalled')
             ],
     ],
 
